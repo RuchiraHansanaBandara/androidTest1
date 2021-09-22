@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
                 textview1 = findViewById(R.id.text1);
                 textview1.setText("Hello Ruchira Bandara");
+                button1.setText("go back");
+
 
             }
         });
