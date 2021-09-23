@@ -1,5 +1,6 @@
 package com.example.test1;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     Button  button1;
+    Button button4;
     TextView textview1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         button1 = findViewById(R.id.btn1);
-
+        button4 = findViewById(R.id.btn4);
+        button4.setText("Click to go to Activity Two");
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -26,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
                 button1.setText("go back");
 
 
+            }
+        });
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),Activity2.class);
+                startActivity(i);
             }
         });
 
