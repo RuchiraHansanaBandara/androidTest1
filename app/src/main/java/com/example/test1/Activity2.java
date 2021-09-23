@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class Activity2 extends AppCompatActivity {
 
     Button button4;
+    Button button5;
     TextView textview4;
 
     @Override
@@ -25,11 +26,25 @@ public class Activity2 extends AppCompatActivity {
 
         button4.setText("Click to go to Main Activity");
 
+        button5 = findViewById(R.id.btn5);
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),MainActivity.class);
                         startActivity(i);
+            }
+        });
+        final Intent words = new Intent(this,Activity3.class);
+
+        String name = "Ruchira Bandara";
+        int Age = 24;
+        words.putExtra("USER_NAME",name);
+        words.putExtra("AGE",Age);
+
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(words);
             }
         });
 
