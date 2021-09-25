@@ -40,6 +40,7 @@ public class Activity4 extends AppCompatActivity {
 
 
         final Intent chooser;
+        
         Intent Sendmail = new Intent(Intent.ACTION_SEND);
         Sendmail.setData(Uri.parse("mailto:"));
         Sendmail.putExtra(Intent.EXTRA_EMAIL, new String[]{"autolife119@gmail.com"});
