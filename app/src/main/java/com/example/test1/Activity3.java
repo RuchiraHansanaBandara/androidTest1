@@ -12,7 +12,7 @@ public class Activity3 extends AppCompatActivity {
 
     TextView textview1,textview2;
 
-    Button button8;
+    Button button8 , button0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class Activity3 extends AppCompatActivity {
 
         button8 = findViewById(R.id.btn8);
 
+        button0 = findViewById(R.id.btn0);
 
         Intent words = getIntent();
 
@@ -41,6 +42,23 @@ public class Activity3 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(i);
+            }
+        });
+
+
+
+
+        final Intent data = new Intent(this,Activity4.class);
+
+        String welcome = "welcome Activity Four";
+
+        data.putExtra("GREETING",welcome);
+
+        button0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(data);
             }
         });
     }
