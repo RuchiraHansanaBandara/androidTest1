@@ -36,6 +36,26 @@ public class Activity4 extends AppCompatActivity {
             }
         });
 
+        // Email send part
+
+
+        final Intent chooser;
+
+        Intent Sendmail = new Intent(Intent.ACTION_SEND);
+        Sendmail.setData(Uri.parse("mailto:"));
+        Sendmail.putExtra(Intent.EXTRA_EMAIL, new String[]{"autolife119@gmail.com"});
+        Sendmail.putExtra(Intent.EXTRA_SUBJECT, "About android development");
+        Sendmail.putExtra(Intent.EXTRA_TEXT, "This is practice android project before joining office ");
+        Sendmail.setType("message/frc822");
+        chooser = Intent.createChooser(Sendmail,"Send Mail");
+
+        button12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(chooser);
+            }
+        });
+
 
 
     }
