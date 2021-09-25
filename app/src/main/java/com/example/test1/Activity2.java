@@ -38,6 +38,7 @@ public class Activity2 extends AppCompatActivity {
 
         String name = "Ruchira Bandara";
         int Age = 24;
+
         words.putExtra("USER_NAME",name);
         words.putExtra("AGE",Age);
 
