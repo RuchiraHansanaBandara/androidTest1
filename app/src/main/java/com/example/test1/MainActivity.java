@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
                 textview1 = findViewById(R.id.text1);
                 textview1.setText("Hello Ruchira Bandara");
                 button1.setText("go back");
+
+                Toast toast = Toast.makeText(getApplicationContext(),"hellow Ruchira",Toast.LENGTH_SHORT);
+                toast.show();
 
 
             }
