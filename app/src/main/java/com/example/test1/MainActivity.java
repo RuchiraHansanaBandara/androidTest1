@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button  button1,button6,buton1;
+    Button  button1,button6,buton1,imgviewbtn;
     Button button4;
     TextView textview1;
     @Override
@@ -22,8 +22,17 @@ public class MainActivity extends AppCompatActivity {
         buton1 = findViewById(R.id.but1);
         button6 = findViewById(R.id.btn6);
         button4 = findViewById(R.id.btn4);
+        imgviewbtn = findViewById(R.id.imgViewbtn);
         button4.setText("Click to go to Activity Two");
 
+
+        imgviewbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),Activity7IMGlistview.class);
+                startActivity(i);
+            }
+        });
 
         buton1.setOnClickListener(new View.OnClickListener() {
             @Override
